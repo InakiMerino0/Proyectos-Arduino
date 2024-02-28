@@ -1,0 +1,51 @@
+.main__container {
+    display: grid;
+    grid-template-areas: "first"
+                        "second";
+}
+
+.main__row {
+    grid-area: first;
+    padding: 5rem;
+}
+
+.main__row2 {
+    display: grid;
+    grid-area: second;
+    grid-template-areas: "col1 col2 col3 col4";
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.main__col1 { 
+    grid-area: col1; 
+}
+
+.main__col2 { 
+    grid-area: col2;
+}
+
+.main__col3 {
+    grid-area: col3;
+}
+
+.main__col4 {
+    grid-area: col4;
+}
+
+
+/* Media query medida telefono estandard */
+@media (max-width: 768px) {
+    .main__container {
+        grid-template-areas: "first"
+                            "second";
+        
+    }
+
+    .main__row2 {
+        grid-template-areas: "col1"
+                            "col2"
+                            "col3"
+                            "col4";
+    }
+}
